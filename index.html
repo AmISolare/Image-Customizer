@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Customizer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <span>A</span> Image Customizer
+            </div>
+            <div class="tabs">
+                <button class="tab active" id="colorTab">
+                    <span class="icon">🎨</span> Change Hue
+                </button>
+                <button class="tab" id="invertTab">
+                    <span class="icon">🔄</span> Invert Colors
+                </button>
+            </div>
+        </div>
+        <!-- Main Content -->
+        <div class="content">
+            <!-- Change Hue Section -->
+            <div id="colorSection" class="tabContent card">
+                <h1>Change Image Hue</h1>
+                <input type="file" id="imageInput" accept="image/*">
+                <img id="image" src="" alt="Upload an image" />
+                <label for="hueRange">Adjust Hue:</label>
+                <input type="range" id="hueRange" min="0" max="360" value="0">
+                <button id="downloadButton">Download Image</button>
+            </div>
+            <!-- Invert Colors Section -->
+            <div id="invertSection" class="tabContent card" style="display: none;">
+                <h1>Invert Image Colors</h1>
+                <input type="file" id="imageInput2" accept="image/*">
+                <img id="image2" src="" alt="Upload an image" />
+                <button id="invertColors">Invert Colors</button>
+                <button id="downloadButtonInvert">Download Image</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
